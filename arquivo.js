@@ -138,3 +138,21 @@ function somar()
     console.log(soma);
     alert(soma);
 }
+
+function somarcor(botao)
+{
+    var valor1 = parseInt(document.getElementById("valor1").value);
+    var valor2 = parseInt(document.getElementById("valor2").value);
+
+    var soma = valor1 + valor2;
+
+    if(soma %2 ==0)
+    {
+        // document.getElementById("btn").style.background = '#F00';
+        botao.style.background = '#F00';
+    }
+    else
+    {
+        botao.style.background = '#00F';
+    }
+}
