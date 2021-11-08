@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <script>
+        function verificaChecks() {
+            var cboxes = document.getElementsByName("animal");
+
+            var contagem = 0;
+
+            for (let i = 0; i < cboxes.length; i++) {
+                if (cboxes[i].checked == true) {
+                    contagem++;
+                }
+            }
+
+            if (contagem >= 2) {
+                document.getElementById("botao").removeAttribute("disabled");
+            }
+            else {
+                document.getElementById("botao").setAttribute("disabled", "enabled");
+            }
+        }
+
+        function checkTodos(todos) 
+        {
+            var cboxes = document.getElementsByName("animal");
+
+            for (let i = 0; i < cboxes.length; i++) {
+                cboxes[i].checked = todos.checked;
+            }
+
+            verificaChecks();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Exercício 5: JavaScript</h1>
+
+    <input name="geral" type="checkbox" onclick="checkTodos(this);"><strong>TODOS</strong></input> <br /><br />
+    <input name="animal" type="checkbox" onclick="verificaChecks();">Cão</input> <br /><br />
+    <input name="animal" type="checkbox" onclick="verificaChecks();">Tartaruga</input><br /><br />
+    <input name="animal" type="checkbox" onclick="verificaChecks();">Gato</input><br /><br />
+    <input name="animal" type="checkbox" onclick="verificaChecks();">Periquito</input><br /><br />
+    <button id="botao" disabled="">Salvar</button>
+</body>
+
+</html>

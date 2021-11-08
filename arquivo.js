@@ -70,67 +70,55 @@
 
 
 
-function minhafuncao() 
-{
+function minhafuncao() {
     alert('Hello!');
 }
 
 
-function mostrarPares() 
-{
-    for (let i = 0; i <= 10; i++) 
-    {
-        if(i%2==0)
-        {
+function mostrarPares() {
+    for (let i = 0; i <= 10; i++) {
+        if (i % 2 == 0) {
             alert(i);
         }
     }
-} 
- 
-function mostrarSomatorio() 
-{
+}
+
+function mostrarSomatorio() {
     var total = 0;
 
-    for (let i = 0; i <= 100; i++) 
-    {
+    for (let i = 0; i <= 100; i++) {
         total += i;
     }
 
     alert(total);
 }
 
-function deixarcaixaalta()
-{
+function deixarcaixaalta() {
     var x = document.getElementById("nome");
     x.value = x.value.toUpperCase();
     // document.getElementById("nome").value = document.getElementById("nome").valeu.toUpperCase();
 }
 
-function mostrarDados()
-{
+function mostrarDados() {
     var nome = document.getElementById("nome").value;
     var idade = document.getElementById("idade").value;
 
     alert(nome + " tem " + idade + " anos!");
 }
 
-function verificarIdade()
-{
+function verificarIdade() {
     var nome = document.getElementById("nome").value;
     var idade = document.getElementById("idade").value;
 
-    if(idade >= 18)
-    {
+    if (idade >= 18) {
         alert(nome + " é maior de idade!");
     }
-    else
-    {
+    else {
         alert(nome + " não é maior de idade!")
     }
 }
 
-function somar()
-{
+function somar() {
     var valor1 = parseInt(document.getElementById("valor1").value);
     var valor2 = parseInt(document.getElementById("valor2").value);
 
@@ -139,20 +127,23 @@ function somar()
     alert(soma);
 }
 
-function somarcor(botao)
-{
+function somarcor(botao) {
     var valor1 = parseInt(document.getElementById("valor1").value);
     var valor2 = parseInt(document.getElementById("valor2").value);
 
     var soma = valor1 + valor2;
 
-    if(soma %2 ==0)
-    {
+    if (soma % 2 == 0) {
         // document.getElementById("btn").style.background = '#F00';
         botao.style.background = '#F00';
     }
-    else
-    {
+    else {
         botao.style.background = '#00F';
     }
 }
+
+
+
+
+
+

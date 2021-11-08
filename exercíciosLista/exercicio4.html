@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <script>
+        function mudar() {
+            var par = document.getElementById("paragrafo");
+
+            if (par.style.display == "none") {
+                par.style.display = "block";
+            }
+            else {
+                par.style.display = "none";
+            }
+
+            /*if (par.style.visibility == "hidden") {
+                par.style.visibility = "visible";
+            }
+            else {
+                par.style.visibility = "hidden";
+            }*/
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Exercício 4: JavaScript</h1>
+
+    <p id="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima nemo aspernatur aliquam, nulla
+        itaque tenetur
+        velit molestias libero facilis soluta consequatur quos inventore dolorem officia. Architecto iusto est
+        aspernatur quo!</p>
+
+    <button onclick="mudar();">Mudar Visibilidade</button>
+
+</body>
+
+</html>
