@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("p").click(function () {
+                $(this).hide();
+            });
+
+            $("button").click(function () {
+
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(3000);
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Aula jQuery</h1>
+    <br />
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo porro labore quos illo vero at quae? Qui
+        fugiat ipsum sed. Natus aliquam laborum quo id enim quaerat dolores ut quod.
+    </p>
+
+    <button>Clique aqui!</button>
+    <br /> <br />
+    <div id="div1" style="width:80px; height: 80px; background-color: red;"></div>
+    <div id="div2" style="width:80px; height: 80px; background-color: green;"></div>
+    <div id="div3" style="width:80px; height: 80px; background-color: blue;"></div>
+
+</body>
+
+</html>
