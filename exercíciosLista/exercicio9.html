@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <script>
+
+        function validar() {
+            var nome = document.getElementById("nome").value;
+            var senha1 = document.getElementById("senha1").value;
+            var senha2 = document.getElementById("senha2").value;
+
+            if (nome != "" && senha1 != "" && senha2 != "") {
+                if (senha1 == senha2) {
+                    if (senha1.length > 5 && senha1.length <= 10) {
+                        alert("Salvo com sucesso!");
+                    }
+                    else {
+                        alert("Senha sem os requisitos!");
+                    }
+                }
+                else {
+                    alert("As senhas precisam ser iguais!!");
+                }
+            }
+            else {
+                alert("Preencha todos os campos!");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Exercício 9: JavaScript</h1>
+    <form>
+        <label>Nome:</label>
+        <input id="nome" type="text" required>
+        <br /><br />
+        <label>Senha:</label>
+        <input id="senha1" type="password" required>
+        <br /><br />
+        <label>Confirmar a senha:</label>
+        <input id="senha2" type="password" required>
+        <br /><br />
+        <button onclick="validar();">Salvar</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <script>
+
+        var tamanho = 16;
+
+        function fonte(cor) {
+            document.getElementById("paragrafo").style.color = cor;
+        }
+
+        function fundo(cor) {
+            document.getElementById("paragrafo").style.backgroundColor = cor;
+        }
+
+        function tamanhoMais() {
+            tamanho++;
+            document.getElementById("paragrafo").style.fontSize = tamanho + "px";
+        }
+
+        function tamanhoMenos() {
+            tamanho--;
+            document.getElementById("paragrafo").style.fontSize = tamanho + "px";
+        }
+
+        function caixaAlta() {
+            var x = document.getElementById("paragrafo");
+            x.innerText = x.innerText.toUpperCase();
+        }
+
+        function caixaBaixa() {
+            document.getElementById("paragrafo").innerHTML =
+                document.getElementById("paragrafo").innerHTML.toLocaleLowerCase();
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Exercício 8: JavaScript</h1>
+
+    <p id="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia neque iure magnam veritatis!
+        Iusto fuga, veniam nihil architecto eaque esse. Tempore excepturi ratione nesciunt repellat ipsum cupiditate
+        suscipit provident veniam.</p>
+    <br /><br />
+    <button onclick="fonte('black');">Fonte para preto</button> <br /><br />
+    <button onclick="fonte('white');">Fonte para branco</button> <br /><br />
+    <button onclick="fundo('black');">Fundo para preto</button> <br /><br />
+    <button onclick="fundo('white');">Fundo para branco</button> <br /><br />
+    <button onclick="tamanhoMais();">+</button> <br /><br />
+    <button onclick="tamanhoMenos();">-</button> <br /><br />
+    <button onclick="caixaAlta();">UPPER</button><br /><br />
+    <button onclick="caixaBaixa();">lower</button><br /><br />
+</body>
+
+</html>
